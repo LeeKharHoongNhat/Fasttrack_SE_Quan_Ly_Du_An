@@ -45,7 +45,7 @@
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <div class="nav-profile-img">
-                <img src="<c:url value="images/faces/facezero.jpg" />" alt="image">
+                <img src="<c:url value="/resources/images/faces/facezero.jpg" />" alt="image">
                 <span class="availability-status online"></span>             
               </div>
               <div class="nav-profile-text">
@@ -193,7 +193,7 @@
           <li class="nav-item nav-profile">
             <a href="#" class="nav-link">
               <div class="nav-profile-image">
-                <img src="images/faces/facezero.jpg" alt="profile">
+                <img src="<c:url value="/resources/images/faces/facezero.jpg" />" alt="profile">
                 <span class="login-status online"></span> <!--change to offline or busy as needed-->              
               </div>
               <div class="nav-profile-text d-flex flex-column">
