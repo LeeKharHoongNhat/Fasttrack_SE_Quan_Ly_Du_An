@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="view/QuanTriHeThong/phongban/test">View Employees</a>
+<a href="QuanTriHeThong/phongban/test">View Employees</a>
 </body>
 </html>
