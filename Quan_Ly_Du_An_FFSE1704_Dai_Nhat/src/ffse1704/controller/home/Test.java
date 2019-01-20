@@ -1,4 +1,4 @@
-package ffse1704.controller;
+package ffse1704.controller.home;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class Test {
 	@RequestMapping("/test")
-	public String viewAdd() {
-		return "phongban/test";
+	public String testView() {
+		return "phongban/list";
 	}
 
 }
