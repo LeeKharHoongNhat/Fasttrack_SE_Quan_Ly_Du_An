@@ -45,8 +45,7 @@
 							<div role="group" aria-label="Button group with nested dropdown"
 								class="btn-group float-md-right " id="add-new">
 								<a href="<c:url value = "addphongban"/>"
-									class="btn btn-info"><span class="fa fa-plus"></span> Thêm
-									mới</a>
+									class="btn btn-info"><span class="fa fa-plus"></span> Add new</a>
 							</div>
 
 						</div>
