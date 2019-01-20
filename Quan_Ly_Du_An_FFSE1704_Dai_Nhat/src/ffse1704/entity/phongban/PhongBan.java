@@ -15,11 +15,11 @@ public class PhongBan implements Serializable {
 
 	@Id
 	@Column(name = "ma_phong_ban", unique = true, nullable = false, length = 30)
-	@NotEmpty
+	@NotEmpty(message="không được để trống!")
 	private String maPhongBan;
 
 	@Column(name = "ten_phong_ban", nullable = false, length = 255)
-	@NotEmpty
+	@NotEmpty(message="không được để trống!")
 	private String tenPhongBan;
 
 

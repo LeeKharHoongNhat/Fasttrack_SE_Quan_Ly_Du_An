@@ -14,37 +14,42 @@
 							<ul class="pagination">
 
 								<c:if test="${indexPage > 1}">
-									<li class="page-item"><a
-										href="/qlda/Phong_Ban/List_Phong_Ban/1" class="page-link">First</a></li>
+									<li class="page-item"><a href="/qlda/phongban/1"
+										class="page-link">First</a></li>
 								</c:if>
 
 
 								<c:if test="${indexPage > 1}">
 									<li class="page-item"><a
-										href="/qlda/Phong_Ban/List_Phong_Ban/${indexPage-1}"
-										class="page-link">${indexPage-1}</a></li>
+										href="/qlda/phongban/${indexPage-1}" class="page-link">${indexPage-1}</a></li>
 								</c:if>
 
 
-								<li class="page-item"><a
-									href="/qlda/Phong_Ban/List_Phong_Ban/${indexPage}"
+								<li class="page-item"><a href="/qlda/phongban/${indexPage}"
 									class="page-link">${indexPage}</a></li>
 
 
 								<c:if test="${indexPage < allPage}">
 									<li class="page-item"><a
-										href="/qlda/Phong_Ban/List_Phong_Ban/${indexPage+1}"
-										class="page-link">${indexPage+1}</a></li>
+										href="/qlda/phongban/${indexPage+1}" class="page-link">${indexPage+1}</a></li>
 								</c:if>
 
 								<c:if test="${indexPage < allPage}">
-									<li class="page-item"><a
-										href="/qlda/Phong_Ban/List_Phong_Ban/${allPage}"
+									<li class="page-item"><a href="/qlda/phongban/${allPage}"
 										class="page-link">Last</a></li>
 								</c:if>
 
 							</ul>
 						</nav>
+						<div class="content-header-right ">
+							<div role="group" aria-label="Button group with nested dropdown"
+								class="btn-group float-md-right " id="add-new">
+								<a href="<c:url value = "addphongban"/>"
+									class="btn btn-info"><span class="fa fa-plus"></span> Thêm
+									mới</a>
+							</div>
+
+						</div>
 						<table class="table table-bordered">
 							<thead>
 								<tr>
@@ -59,9 +64,9 @@
 										<td>${emp.maPhongBan}</td>
 										<td>${emp.tenPhongBan}</td>
 										<td><a
-											href="/qlda/Phong_Ban/Edit_PhongBan/${emp.maPhongBan}"
+											href="/qlda/phongban/editphongban/${emp.maPhongBan}"
 											class="btn btn-primary">edit</a> <a
-											href="/qlda/Phong_Ban/Delete_PhongBan/${emp.maPhongBan}"
+											href="/qlda/phongban/deletephongban/${emp.maPhongBan}"
 											class="btn btn-danger">delete</a></td>
 									</tr>
 								</c:forEach>

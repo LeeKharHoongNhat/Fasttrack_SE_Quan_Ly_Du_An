@@ -1,12 +1,39 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<jsp:include page="/WEB-INF/view/templates/header.jsp" />
+<div class="main-panel">
+	<div class="content-wrapper">
+		<div class="col-12 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<h4 class="card-title">Sửa thông tin phòng ban</h4>
+					<div class="content-header-right ">
+						<div role="group" aria-label="Button group with nested dropdown"
+							class="btn-group float-md-right "">
+							<a href="<c:url value = "/phongban/1"/>" class="btn btn-info"><span
+								class="fa fa-plus"></span>Back</a>
+						</div>
 
-</body>
-</html>
+					</div>
+					<form:form class="forms-sample" method="post"
+						action="qlda/phongban/editsavephongban">
+						<div class="form-group">
+							<label for="exampleInputName1">Mã phòng ban</label>
+							<form:input path="maPhongBan" class="form-control" />
+							<form:errors path="maPhongBan" cssStyle="color: red" />
+							<strong style="color: red;">${mess}</strong>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail3">Tên Phòng Ban</label>
+							<form:input path="tenPhongBan" class="form-control" />
+							<form:errors path="tenPhongBan" cssStyle="color: red" />
+						</div>
+						<button type="submit" class="btn btn-gradient-primary mr-2">Edit</button>
+						<button class="btn btn-light" type="reset">Cancel</button>
+					</form:form>
+				</div>
+			</div>
+		</div>
+		<jsp:include page="/WEB-INF/view/templates/footer.jsp" />

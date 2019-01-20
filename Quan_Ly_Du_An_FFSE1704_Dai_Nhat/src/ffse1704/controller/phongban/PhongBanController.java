@@ -21,7 +21,7 @@ import ffse1704.entity.phongban.PhongBan;
 import ffse1704.service.phongban.PhongBanService;
 
 @Controller
-@RequestMapping("/Phong_Ban")
+@RequestMapping("/phongban")
 public class PhongBanController {
 
 	private PhongBanService phongBanService;
@@ -36,7 +36,7 @@ public class PhongBanController {
 		this.phongBanService = phongBanService;
 	}
 
-	@RequestMapping("/List_Phong_Ban/{page}")
+	@RequestMapping("/{page}")
 	public String list(@PathVariable int page, Model model) throws SQLException {
 		int allItem = phongBanService.getRecordsTotal();
 		int reCordInPage = 2;
@@ -50,12 +50,12 @@ public class PhongBanController {
 		return "phongban/list";
 	}
 
-	@RequestMapping("/Add_Phong_Ban")
+	@RequestMapping("/addphongban")
 	public ModelAndView viewAdd() {
 		return new ModelAndView("phongban/add", "command", new PhongBan());
 	}
 
-	@RequestMapping(value = "/Save_Phong_Ban", method = RequestMethod.POST)
+	@RequestMapping(value = "/savephongban", method = RequestMethod.POST)
 	public String addDomain(@ModelAttribute("command") @Valid PhongBan phongBan, BindingResult result,
 			HttpSession session,Model model) {
 		if (result.hasErrors()) {
@@ -72,17 +72,17 @@ public class PhongBanController {
 			
 		}
 
-		return "redirect:/Phong_Ban/List_Phong_Ban/1";// will redirect to viewemp request mapping
+		return "redirect:/phongban/1";// will redirect to viewemp request mapping
 	}
 	
-	@RequestMapping(value = "/Edit_Phong_Ban/{idPhongBan}")
+	@RequestMapping(value = "/editphongban/{idPhongBan}")
 	public String viewEditPhongBan(@PathVariable String idPhongBan, Model model) {
 		PhongBan phongBan = phongBanService.getPhongBanbyIdPhongBan(idPhongBan);
 		model.addAttribute("command", phongBan);
 		return "phongban/edit";
 	}
 	
-	@RequestMapping(value = "/Edit_Save_Phong_Ban", method = RequestMethod.POST)
+	@RequestMapping(value = "/editsavephongban", method = RequestMethod.POST)
 	public String editSave(@ModelAttribute("command") @Valid PhongBan phongBan, BindingResult result,
 			HttpSession session) {
 		if (result.hasErrors()) {
@@ -91,20 +91,20 @@ public class PhongBanController {
 			phongBanService.addNew(phongBan);
 		}
 
-		return "redirect:/Phong_Ban/List_Phong_Ban/1";// will redirect to viewemp request mapping
+		return "redirect:/phongban/1";// will redirect to viewemp request mapping
 	}
 	
 	
-	@RequestMapping(value = "/Delete_PhongBan/{idPhongBan}")
+	@RequestMapping(value = "/deletephongban/{idPhongBan}")
 	public String viewDeletePhongBan(@PathVariable String idPhongBan, Model model) {
 		PhongBan phongBan = phongBanService.getPhongBanbyIdPhongBan(idPhongBan);
 		model.addAttribute("command", phongBan);
 		return "phongban/delete";
 	}
 	
-	@RequestMapping(value = "/Submit_Delete_Domain", method = RequestMethod.POST)
+	@RequestMapping(value = "/submitdeletephongban", method = RequestMethod.POST)
 	public String deletePhongBan(@ModelAttribute("command") PhongBan phongBan) {
 		phongBanService.delete(phongBan.getMaPhongBan());;
-		return "redirect:/Phong_Ban/List_Phong_Ban/1";
+		return "redirect:/phongban/1";
 	}
 }
