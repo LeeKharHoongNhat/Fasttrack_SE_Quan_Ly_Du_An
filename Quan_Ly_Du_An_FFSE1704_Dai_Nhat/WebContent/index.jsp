@@ -1,2 +1,2 @@
-<% response.sendRedirect("phongban/1"); %>
-<%-- <% response.sendRedirect("/test"); %> --%>
+<%-- <% response.sendRedirect("phongban/1"); %> --%>
+ <% response.sendRedirect("/home"); %>

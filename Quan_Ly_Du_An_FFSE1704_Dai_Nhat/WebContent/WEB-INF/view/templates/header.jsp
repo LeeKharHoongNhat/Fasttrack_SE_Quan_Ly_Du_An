@@ -230,26 +230,27 @@ td:nth-child(even) {
 					</a></li>
 
 					<!-- start home  -->
-					<li class="nav-item"><a class="nav-link" href="index.html">
-							<span class="menu-title">Dashboard</span> <i
-							class="mdi mdi-home menu-icon"></i>
+					<li class="nav-item"><a class="nav-link"
+						href="<c:url value="/home"/>"> <span class="menu-title">Home</span>
+							<i class="mdi mdi-home menu-icon"></i>
 					</a></li>
 					<!-- end home -->
+
+
 					<!-- start phong ban  -->
 					<li class="nav-item"><a class="nav-link"
-						data-toggle="collapse" href="#ui-basic" aria-expanded="false"
-						aria-controls="ui-basic"> <span class="menu-title">Phòng
-								ban</span> <i class="menu-arrow"></i> <i
+						data-toggle="collapse" href=" #ui-basic"> <span
+							class="menu-title">Phòng ban</span> <i class="menu-arrow" ></i> <i
 							class="mdi mdi-crosshairs-gps menu-icon"></i>
 					</a>
 						<div class="collapse" id="ui-basic">
 							<ul class="nav flex-column sub-menu">
 								<li class="nav-item"><a class="nav-link"
-									href="pages/ui-features/buttons.html">Phòng nhân sự</a></li>
+									href="<c:url value="/phongban/1"/>">Phòng giám đốc</a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="pages/ui-features/typography.html">Phòng dự án</a></li>
 							</ul>
 						</div></li>
-					<!-- end phong ban -->
+					<!-- end phong ban  -->
 				</ul>
 			</nav>
