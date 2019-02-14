@@ -92,9 +92,9 @@
 			<property name="ignoreInvalidLocale" value="true"></property>
 		</bean>
 	</mvc:interceptors>
-	
-	
+
 </beans>
+
 
 
 

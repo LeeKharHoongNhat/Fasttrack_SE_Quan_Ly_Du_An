@@ -235,7 +235,7 @@ td:nth-child(even) {
 							<i class="mdi mdi-home menu-icon"></i>
 					</a></li>
 					<!-- end home -->
-
+					
 
 					<!-- start phong ban  -->
 					<li class="nav-item"><a class="nav-link"
@@ -252,5 +252,13 @@ td:nth-child(even) {
 							</ul>
 						</div></li>
 					<!-- end phong ban  -->
+					
+					
+					<!-- start tieu thuc  -->
+					<li class="nav-item"><a class="nav-link"
+						href="<c:url value="/tieuthuc/1"/>"> <span class="menu-title">Tiêu thức</span>
+							<i class="mdi mdi-format-list-bulleted menu-icon"></i>
+					</a></li>
+					<!-- end tieu thuc  -->
 				</ul>
 			</nav>
